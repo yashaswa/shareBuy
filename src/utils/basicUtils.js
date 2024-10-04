@@ -1,6 +1,7 @@
 
 const updateStockPrice = (currentPrice) => {
   const fluctuation = (Math.random() * 2 - 1) * 0.01;  // Random fluctuation by +1 or -1 %
+   console.log(`Updated Price: $${currentPrice.toFixed(2)}`);
   return currentPrice * (1 + fluctuation);
 };
 
