@@ -1,7 +1,28 @@
-I have first configure basic buying and selling app inside it we have various funcionalities initally we have kept the price of the stock to be 100$ 
-now when we start the server two api get-portfoli and get-stock-price will automatically will hit 
-now inside index.js I have set up setInterval function which will randomly generate no such that they are less than 1 % of the previous price
-if the stock price goes below 2 % of the initial price initially and later 2 % of the previous bought price then we will buy 10 shares
-and if the stock price goes up by 3% of the buying price then we will sell 10 stocks and profit and loss will be displayed on the scree as it call
-porfolio at the time of buying and selling 
-in this way we can see how much profit is at the end and also I have set up that maximum 50 shares you can buy for the demonstration purpose
+Features
+Automatic Stock Price Fluctuation: Simulates stock price updates every second.
+Predefined Trading Strategy:
+Buys stocks if the price drops by 2% from the last purchase or reference price.
+Sells stocks if the price increases by 3% from the last purchase.
+Portfolio Management: Keeps track of the cash balance, number of stocks owned, and total profit or loss.
+API Endpoints: Provides endpoints to get the current stock price and portfolio details.
+Error Handling: Robust error handling throughout the application to catch unexpected issues.
+
+The bot uses a simple trading strategy:
+
+Buy Stocks: When the stock price drops by 2% from the last purchase or the reference price, it buys 10 stocks, as long as the user has enough balance and hasn't exceeded the daily purchase limit (50 stocks).
+Sell Stocks: When the stock price increases by 3% from the last purchase, it sells 10 stocks if the user has enough in their portfolio.
+
+Technologies Used
+Node.js: Backend runtime environment.
+Express.js: Framework for building the API.
+JavaScript: Core language used for implementing the bot's logic.
+Modular Structure: The project is organized into controllers, services, and utility functions, following best practices for maintainability.
+
+
+Major Installation
+npm install
+npm nodemon
+npm express 
+npm dotenv
+
+
